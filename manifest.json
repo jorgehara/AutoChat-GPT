@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "WhatsApp Contacts Exporter",
+    "version": "1.0",
+    "description": "Exporta contactos de WhatsApp Web a CSV",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "downloads",
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://web.whatsapp.com/*"
+    ],
+    "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "src/icons/icon16.png",
+            "48": "src/icons/icon48.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://web.whatsapp.com/*"],
+        "js": ["src/content/content.js"],
+        "run_at": "document_idle"
+    }],
+    "background": {
+        "service_worker": "src/background/background.js",
+        "type": "module"
+    },
+    "icons": {
+        "16": "src/icons/icon16.png",
+        "48": "src/icons/icon48.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

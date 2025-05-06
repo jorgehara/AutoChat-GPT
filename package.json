@@ -1,0 +1,27 @@
+{
+  "name": "whatsapp-contacts-exporter",
+  "version": "1.0.0",
+  "description": "Extensión de Chrome para exportar contactos de WhatsApp Web.",
+  "main": "src/background/background.js",
+  "scripts": {
+    "build": "echo 'Build script not defined'",
+    "test": "echo 'Test script not defined'",
+    "start": "echo 'Start script not defined'"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "keywords": [
+    "whatsapp",
+    "contacts",
+    "exporter",
+    "chrome-extension"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
